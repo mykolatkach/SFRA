@@ -346,4 +346,21 @@ server.replace(
     }
 );
 
+/**
+ * Account-PasswordReset : The Account-PasswordReset endpoint renders the forgot your password form that allows a shopper to submit their email address in order to request a password change
+ * @name Base/Account-PasswordReset
+ * @function
+ * @memberof Account
+ * @param {middleware} - server.middleware.https
+ * @param {category} - sensitive
+ * @param {renders} - isml
+ * @param {serverfunction} - get
+ */
+server.replace('PasswordReset', server.middleware.https, function (req, res, next) {
+    var isCustomerRegistered = customer.registered;
+
+    res.render('account/password/requestPasswordReset', { mobile: true, isCustomerRegistered: isCustomerRegistered });
+    next();
+});
+
 module.exports = server.exports();
