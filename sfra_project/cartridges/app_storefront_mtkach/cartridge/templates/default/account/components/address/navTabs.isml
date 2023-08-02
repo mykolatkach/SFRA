@@ -1,0 +1,28 @@
+<div class="js-address-nav-tabs-wrapper">
+    <ul class="nav nav-tabs nav-fill" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a
+                <isif condition="${pdict.navTabValue === 'shipping'}">
+                    class="nav-link active js-add-address-nav-tab"
+                <iselse>
+                    class="nav-link js-add-address-nav-tab"
+                </isif>
+                href="#shipping" data-id='shipping' data-toggle="tab" role="tab" aria-controls="shipping" aria-selected="true" tabindex="0" id="shipping-tab">
+                <isprint value="${Resource.msg('link.navtabs.shipping.module', 'address', null)}" encoding="on" />
+            </a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+            <a
+                <isif condition="${pdict.navTabValue === 'billing'}">
+                    class="nav-link active js-add-address-nav-tab"
+                <iselse>
+                    class="nav-link js-add-address-nav-tab"
+                </isif>
+                href="#billing" data-id='billing' data-toggle="tab" role="tab" aria-controls="billing" aria-selected="false" tabindex="-1" id="billing-tab">
+                <isprint value="${Resource.msg('link.navtabs.billing.module', 'address', null)}" encoding="on" />
+            </a>
+        </li>
+    </ul>
+</div>
+

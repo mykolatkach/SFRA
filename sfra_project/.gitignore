@@ -1,6 +1,7 @@
 node_modules/
 app_storefront_base/
 bm_app_storefront_base/
+static/
 modules/
 npm-debug.log
 dw.json
