@@ -1,8 +1,6 @@
 /* eslint-disable no-undef */
 'use strict';
 
-'use strict';
-
 var server = require('server');
 var page = module.superModule;
 server.extend(page);
